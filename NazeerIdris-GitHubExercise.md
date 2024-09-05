@@ -1,0 +1,2 @@
+## discribe the milestone of AI:
+the idea of ai started before a long time scince the greek back to 400 BC where it was widely believed that Talos, a metal guardian created by the god Hephaestus to be the guardian of Crete. And the deveolopment continuoed to throughout the histroy with many scientest like Leonardo da Vinci. but until the current time we still don't have an AI that intellegince as a human.
