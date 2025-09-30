@@ -1,0 +1,54 @@
+# Configuration file for improved data preparation pipeline
+
+# General settings
+artifact_dir: "artifacts"
+artifact_version: "v2"
+random_state: 42
+
+# Data splitting parameters
+test_size: 0.10
+valid_size: 0.10
+
+# Feature extraction settings
+features:
+  sentiment: true
+  pos: true
+  readability: true
+  lexical: true
+  statistical: true
+
+# TF-IDF parameters
+tfidf:
+  ngram_range: [1, 2]
+  min_df: 5
+  max_df: 0.8
+  max_features: 200000
+  sublinear_tf: true
+  norm: "l2"
+
+# Sequence parameters for deep learning
+sequences:
+  vocab_size: 40000
+  max_len: null  # Will be determined automatically
+  max_len_percentile: 95
+
+# Transformer parameters
+transformer:
+  model_name: "distilbert-base-uncased"
+  max_length: 128
+
+# Data augmentation
+augmentation:
+  enabled: true
+  target_balance_ratio: 0.3  # Apply augmentation if balance ratio below this
+
+# Data quality thresholds
+quality_thresholds:
+  min_text_length: 3
+  max_text_length: 1000
+  min_class_balance_ratio: 0.1
+
+# Logging
+logging:
+  level: "INFO"
+  file: "data_preparation.log"
